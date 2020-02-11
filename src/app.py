@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import sys
-import connect
+import src.connect as connect
 
 
 def main():
