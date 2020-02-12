@@ -7,7 +7,7 @@ import src.connect as connect
 
 def main():
     connect.connection()
-    sys.exit(main())
+    sys.exit()
 
 
 if __name__ == "__main__":
