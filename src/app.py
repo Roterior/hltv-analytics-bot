@@ -1,13 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
-import sys
-import src.connect as connect
+from sys import exit
+from src.process import process
 
 
 def main():
-    connect.connection()
-    sys.exit()
+    process()
+    exit()
 
 
 if __name__ == "__main__":
