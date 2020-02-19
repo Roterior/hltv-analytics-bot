@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 from sys import exit
-from src.process import process
+from src.service.process import process
 
 
 def main():
