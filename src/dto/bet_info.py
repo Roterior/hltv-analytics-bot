@@ -1,13 +1,13 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+from src.util.tostring import tostring
 
 
+@tostring
 class BetInfo:
-    ratio: float = None
-    summary: int = None
-    percent: int = None
+    info: str = None
+    sum: str = None
 
-    def __init__(self, ratio: float, summary: int, percent: int):
-        self.ratio = ratio
-        self.summary = summary
-        self.percent = percent
+    def __init__(self, info: str, sum: str):
+        self.info = info
+        self.sum = sum

@@ -1,5 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+import logging
 from time import sleep
 from sys import stdout
 from os.path import abspath
@@ -20,16 +21,18 @@ class Connector:
     @staticmethod
     def _get_html(path: str) -> str:
         try:
+            logging.info('getting html code')
             settings = ChromeOptions()
             settings.add_argument(f'user-data-dir={abspath("../cache")}')
             browser = Chrome('../resource/lib/chrome_driver.exe', options=settings)
             del settings
             browser.set_window_size(1920, 1080)
             browser.get(path)
-            sleep(5)
+            sleep(10)
             html = str(browser.page_source)
             browser.close()
             del browser
+            logging.info('closing browser')
             return html
         except WebDriverException:
             trace(limit=1, file=stdout)
