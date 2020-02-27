@@ -5,11 +5,11 @@ from src.service.process import process
 from src.util import log
 
 
-def main():
+def run():
     log.setup()
     process()
     exit()
 
 
-if __name__ == "__main__":
-    main()
+if __name__ == '__main__':
+    run()
